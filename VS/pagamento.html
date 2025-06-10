@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pagamento - T.A.T.I</title>
+    <link rel="stylesheet" href="pagamento.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+
+  <body>
+
+    <img href="index.html" class="logo" src="imagens/TATI .png" alt="Logo TATI">
+    <header>
+      <nav>
+        <ul>
+          <li><a><Strong>PAGAMENTO</Strong></a></li>
+        </ul>
+      </nav>
+      <a href="index.html" class="voltar"><i class="fas fa-arrow-left"></i> Voltar</a>
+      </a>
+    </header>
+
+    <div class="container">
+      <h1>Finalizar Pagamento</h1>
+      <form id="form-pagamento">
+        <div class="input-group">
+          <label for="nome">Nome no Cartão</label>
+          <input type="text" id="nome" placeholder="Nome completo" required />
+        </div>
+        <div class="input-group">
+          <label for="numero">Número do Cartão</label>
+          <input type="text" id="numero" placeholder="0000 0000 0000 0000" maxlength="19" required />
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label for="validade">Validade</label>
+            <input type="text" id="validade" placeholder="MM/AA" maxlength="5" required />
+          </div>
+          <div class="input-group">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" placeholder="123" maxlength="4" required />
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="parcelas">Parcelamento</label>
+          <select id="parcelas" required>
+            <option value="">Escolha</option>
+            <option value="1x">1x de R$799,90</option>
+            <option value="2x">2x de R$399,95</option>
+            <option value="4x">4x de R$199,98</option>
+            <option value="10x">10x de R$79,99</option>
+          </select>
+        </div>
+        <button type="submit">Pagar Agora</button>
+      </form>
+    </div>
+
+    <script>
+      const form = document.getElementById("form-pagamento");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Pagamento processado com sucesso!");
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
